@@ -422,21 +422,21 @@ let products = [
   },
 ];
 
-app.get("/products", function (req, res) {
+app.get("/productApp/products", function (req, res) {
   res.send(products);
 });
-app.post("/products", (req, res) => {
+app.post("/productApp/products", (req, res) => {
   const product = req.body;
   products.push(product);
   console.log(product);
   res.send(product);
 });
-app.get("/products/:id", function (req, res) {
+app.get("/productApp/products/:id", function (req, res) {
   let id = req.params.id;
   let obj = products.find((obj1) => obj1.id === id);
   obj ? res.send(obj) : res.send("not found");
 });
-app.put("/products/:id", function (req, res) {
+app.put("/productApp/products/:id", function (req, res) {
   console.log("Put called");
   let id = req.params.id;
   const product = req.body;
@@ -447,7 +447,7 @@ app.put("/products/:id", function (req, res) {
     res.send(product);
   } else res.send("not found");
 });
-app.delete("/products/:id", function (req, res) {
+app.delete("/productApp/products/:id", function (req, res) {
   let id = req.params.id;
   let index = products.findIndex((obj1) => obj1.id === id);
   if (index >= 0) {
@@ -457,7 +457,7 @@ app.delete("/products/:id", function (req, res) {
   res.send("not found");
 });
 
-app.get("/persons", function (req, res) {
+app.get("/personApp/persons", function (req, res) {
   let page = req.query.page ? +req.query.page : 1;
   let city = req.query.city;
   let company = req.query.company;
@@ -472,7 +472,7 @@ app.get("/persons", function (req, res) {
   res.send(makeData(page, pageSize, data1));
 });
 
-app.post("/persons", (req, res) => {
+app.post("/personApp/persons", (req, res) => {
   const person = req.body;
   person.id = id;
   id = id + 7;
@@ -505,7 +505,7 @@ let filterParam = (arr, name, values) => {
   return arr1;
 };
 
-app.get("/persons/:id", function (req, res) {
+app.get("/personApp/persons/:id", function (req, res) {
   let id = req.params.id;
   let obj = persons.find((obj1) => obj1.id === id);
   if (obj) res.send(obj);
