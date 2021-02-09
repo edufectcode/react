@@ -6,7 +6,8 @@ app.use(function(req, res, next) {
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  );  
+  res.header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT,OPTIONS");
   next();
 });
 const port= 2450;
