@@ -127,6 +127,19 @@ app.post("/productApp/products", (req, res) => {
     res.send(product);
   } else res.status(400).send("Product Id already exists");
 });
+app.post("/productApp/users", (req, res) => {
+  const user = req.body;
+  let u1 = users.find((u) => u.username === user.username);
+  if (!u1) {
+    users.push(user);
+    let user1 = {
+      username: user.username,
+      name: user.name,
+      role: user.role,
+    };
+    res.send(user1);
+  } else res.status(400).send("Username already exists");
+});
 app.post("/productApp/login", (req, res) => {
   const details = req.body;
   let user = users.find(
@@ -147,10 +160,8 @@ app.get("/productApp/products/:id", function (req, res) {
   obj ? res.send(obj) : res.send("not found");
 });
 app.put("/productApp/products/:id", function (req, res) {
-  console.log("Put called");
   let id = req.params.id;
   const product = req.body;
-  console.log(id, product);
   let index = products.findIndex((obj1) => obj1.id === id);
   if (index >= 0) {
     products[index] = product;
@@ -159,11 +170,32 @@ app.put("/productApp/products/:id", function (req, res) {
 });
 app.delete("/productApp/products/:id", function (req, res) {
   let id = req.params.id;
-  console.log("DELETE ", id);
   let index = products.findIndex((obj1) => obj1.id === id);
   if (index >= 0) {
     let product = products.splice(index, 1);
     res.send(product);
+  } else res.send("not found");
+});
+app.put("/productApp/users/:username", function (req, res) {
+  let username = req.params.username;
+  const user = req.body;
+  let index = users.findIndex((obj1) => obj1.username === username);
+  if (index >= 0) {
+    users[index] = user;
+    let user1 = {
+      username: user.username,
+      name: user.name,
+      role: user.role,
+    };
+    res.send(user1);
+  } else res.send("not found");
+});
+app.delete("/productApp/users/:username", function (req, res) {
+  let username = req.params.username;
+  let index = products.findIndex((obj1) => obj1.username === username);
+  if (index >= 0) {
+    let user = users.splice(index, 1);
+    res.send("User deleted");
   } else res.send("not found");
 });
 
