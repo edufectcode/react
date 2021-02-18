@@ -192,7 +192,7 @@ app.put("/productApp/users/:username", function (req, res) {
 });
 app.delete("/productApp/users/:username", function (req, res) {
   let username = req.params.username;
-  let index = products.findIndex((obj1) => obj1.username === username);
+  let index = users.findIndex((obj1) => obj1.username === username);
   if (index >= 0) {
     let user = users.splice(index, 1);
     res.send("User deleted");
