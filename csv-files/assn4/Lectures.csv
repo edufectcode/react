@@ -1,0 +1,13 @@
+Id,CourseId,Topic,Date,Attendance
+1,1,Components,18/03/2019,7$10$12$16
+2,1,Props,22/03/2019,7$12$16
+3,1,Routing,23/03/2019,7$16
+4,1,Http in React,26/03/2019,7$10$12$16
+5,1,Authentication,28/03/2019,
+6,2,Introduction,27/02/2019,8$9$10$11$12$13$14
+7,2,Basics of JS,1/03/2019,$13$14
+8,2,Array Functions,2/03/2019,
+9,2,JS and DOM,4/03/2019,
+10,3,Staring with Node,12/04/2019,$10$12$13
+11,3,Node and Express,14/04/2019,
+12,6,Introduction to Python,19/04/2019,
