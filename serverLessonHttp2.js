@@ -248,4 +248,11 @@ app.get("/personApp/persons/:id", function (req, res) {
   if (obj) res.send(obj);
   res.send("not found");
 });
+
+app.get("/productApp/users/:username", function (req, res) {
+  let username = req.params.username;
+  let user = users.find((obj1) => obj1.username === username);
+  user ? res.send(user) : res.send("not found");
+});
+
 app.listen(port, () => console.log(`Node app listening on port ${port}!`));
