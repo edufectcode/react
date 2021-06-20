@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
 });
 const port = 2410;
 const pageSize = 5;
-let id = 45;
+let id = 745;
 let persons = [
   {
     id: "1",
@@ -56,8 +56,329 @@ let persons = [
     city: "Bangalore",
     company: "Amazon",
   },
+  {
+    id: "16",
+    name: "Tim Jonas",
+    age: 47,
+    city: "London",
+    company: "Microsoft",
+  },
+  {
+    id: "18",
+    name: "Julia Martins",
+    age: 34,
+    city: "Paris",
+    company: "Apple",
+  },
+  {
+    id: "21",
+    name: "Payal Sethi Gupta",
+    age: 41,
+    city: "New Delhi",
+    company: "Microsoft",
+  },
+  {
+    id: "25",
+    name: "Anita Burton",
+    age: 34,
+    city: "London",
+    company: "Google",
+  },
+  {
+    id: "34",
+    name: "George Matthews",
+    age: 26,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "28",
+    name: "Vish Talwar",
+    age: 46,
+    city: "New Delhi",
+    company: "Amazon",
+  },
+  {
+    id: "41",
+    name: "Pooja Kaur",
+    age: 25,
+    city: "Bangalore",
+    company: "Amazon",
+  },
+  {
+    id: "51",
+    name: "John Bundy",
+    age: 27,
+    city: "London",
+    company: "Amazon",
+  },
+  {
+    id: "52",
+    name: "Anna Matthews",
+    age: 39,
+    city: "Paris",
+    company: "Google",
+  },
+  {
+    id: "53",
+    name: "Pankaj Gupta",
+    age: 32,
+    city: "New Delhi",
+    company: "Facebook",
+  },
+  {
+    id: "56",
+    name: "Kathy Graham",
+    age: 34,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "58",
+    name: "Tony Fullerton",
+    age: 36,
+    city: "Paris",
+    company: "Amazon",
+  },
+  {
+    id: "61",
+    name: "Smita Kumar",
+    age: 38,
+    city: "Bangalore",
+    company: "Microsoft",
+  },
+  {
+    id: "76",
+    name: "Harry Smith",
+    age: 41,
+    city: "London",
+    company: "Apple",
+  },
+  {
+    id: "78",
+    name: "Amy Martins",
+    age: 27,
+    city: "Paris",
+    company: "Microsoft",
+  },
+  {
+    id: "81",
+    name: "Richa Singh",
+    age: 33,
+    city: "New Delhi",
+    company: "Google",
+  },
+  {
+    id: "95",
+    name: "Boris Thompson",
+    age: 43,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "94",
+    name: "John Major",
+    age: 36,
+    city: "London",
+    company: "Amazon",
+  },
+  {
+    id: "88",
+    name: "Ashish Talwar",
+    age: 57,
+    city: "New Delhi",
+    company: "Microsoft",
+  },
+  {
+    id: "121",
+    name: "T Ashwin",
+    age: 40,
+    city: "Bangalore",
+    company: "Google",
+  },
+  {
+    id: "145",
+    name: "Steve Paine",
+    age: 31,
+    city: "London",
+    company: "Apple",
+  },
+  {
+    id: "167",
+    name: "David Cummins",
+    age: 42,
+    city: "Paris",
+    company: "Microsoft",
+  },
+  {
+    id: "172",
+    name: "Rishabh Gupta",
+    age: 34,
+    city: "New Delhi",
+    company: "Google",
+  },
+  {
+    id: "176",
+    name: "Serena Stevens",
+    age: 25,
+    city: "London",
+    company: "Facebook",
+  },
+  {
+    id: "184",
+    name: "Lionel Burton",
+    age: 27,
+    city: "Paris",
+    company: "Tesla",
+  },
+  {
+    id: "211",
+    name: "Navdeep Kumar",
+    age: 40,
+    city: "Bangalore",
+    company: "Amazon",
+  },
+  {
+    id: "216",
+    name: "Joe Harris",
+    age: 45,
+    city: "London",
+    company: "Microsoft",
+  },
+  {
+    id: "218",
+    name: "Angela Smith",
+    age: 33,
+    city: "Paris",
+    company: "Apple",
+  },
+  {
+    id: "321",
+    name: "Neha Sehgal",
+    age: 41,
+    city: "New Delhi",
+    company: "Microsoft",
+  },
+  {
+    id: "225",
+    name: "Margaret B",
+    age: 35,
+    city: "London",
+    company: "Google",
+  },
+  {
+    id: "234",
+    name: "Harry Seldon",
+    age: 28,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "428",
+    name: "Maya Iyer",
+    age: 49,
+    city: "New Delhi",
+    company: "Amazon",
+  },
+  {
+    id: "441",
+    name: "Anita Sood",
+    age: 29,
+    city: "Bangalore",
+    company: "Amazon",
+  },
+  {
+    id: "151",
+    name: "Donald Jr.",
+    age: 32,
+    city: "London",
+    company: "Amazon",
+  },
+  {
+    id: "252",
+    name: "Timothy Matthews",
+    age: 45,
+    city: "Paris",
+    company: "Google",
+  },
+  {
+    id: "435",
+    name: "Umesh Gupta",
+    age: 26,
+    city: "New Delhi",
+    company: "Facebook",
+  },
+  {
+    id: "286",
+    name: "Stephanie Graham",
+    age: 29,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "158",
+    name: "Charles Bush",
+    age: 32,
+    city: "Paris",
+    company: "Amazon",
+  },
+  {
+    id: "261",
+    name: "Sonia Aiyer",
+    age: 35,
+    city: "Bangalore",
+    company: "Microsoft",
+  },
+  {
+    id: "576",
+    name: "Edwards Smith",
+    age: 39,
+    city: "London",
+    company: "Apple",
+  },
+  {
+    id: "378",
+    name: "Ken Rosewel",
+    age: 26,
+    city: "Paris",
+    company: "Microsoft",
+  },
+  {
+    id: "281",
+    name: "Rohit Jain",
+    age: 33,
+    city: "New Delhi",
+    company: "Google",
+  },
+  {
+    id: "295",
+    name: "Michael Fox",
+    age: 44,
+    city: "London",
+    company: "Tesla",
+  },
+  {
+    id: "194",
+    name: "Viktor Major",
+    age: 38,
+    city: "London",
+    company: "Amazon",
+  },
+  {
+    id: "688",
+    name: "Joy Sharma",
+    age: 54,
+    city: "New Delhi",
+    company: "Microsoft",
+  },
+  {
+    id: "721",
+    name: "Pranay Bansal",
+    age: 37,
+    city: "Bangalore",
+    company: "Google",
+  },
 ];
-
 let products = [
   {
     id: "A101",
@@ -254,5 +575,29 @@ app.get("/productApp/users/:username", function (req, res) {
   let user = users.find((obj1) => obj1.username === username);
   user ? res.send(user) : res.send("not found");
 });
+
+app.put("/personApp/persons/:id", function (req, res) {
+  console.log("Put called");
+  let id = req.params.id;
+  const person = req.body;
+  console.log(id, person);
+  let updatedPerson = { id: id, ...person };
+  let index = persons.findIndex((obj1) => obj1.id === id);
+  if (index >= 0) {
+    persons[index] = updatedPerson;
+    res.send(updatedPerson);
+  } else res.send("not found");
+});
+
+app.delete("/personApp/persons/:id", function (req, res) {
+  let id = req.params.id;
+  let index = persons.findIndex((obj1) => obj1.id === id);
+  if (index >= 0) {
+    let person = persons.splice(index, 1);
+    res.send(person);
+  }
+  res.send("not found");
+});
+
 
 app.listen(port, () => console.log(`Node app listening on port ${port}!`));
