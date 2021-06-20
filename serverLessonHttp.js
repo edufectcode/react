@@ -7,6 +7,10 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
+    res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE, HEAD"
+  );
   next();
 });
 const port = 2410;
@@ -511,4 +515,28 @@ app.get("/personApp/persons/:id", function (req, res) {
   if (obj) res.send(obj);
   res.send("not found");
 });
+
+app.put("/personApp/persons/:id", function (req, res) {
+  console.log("Put called");
+  let id = req.params.id;
+  const person = req.body;
+  console.log(id, person);
+  let updatedPerson = { id: id, ...person };
+  let index = persons.findIndex((obj1) => obj1.id === id);
+  if (index >= 0) {
+    persons[index] = updatedPerson;
+    res.send(updatedPerson);
+  } else res.send("not found");
+});
+
+app.delete("/personApp/persons/:id", function (req, res) {
+  let id = req.params.id;
+  let index = persons.findIndex((obj1) => obj1.id === id);
+  if (index >= 0) {
+    let person = persons.splice(index, 1);
+    res.send(person);
+  }
+  res.send("not found");
+});
+
 app.listen(port, () => console.log(`Node app listening on port ${port}!`));
