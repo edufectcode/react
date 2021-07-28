@@ -1,0 +1,37 @@
+API endpoints and description
+
+GET /products/:category? ,for getting products , category parameter is optional 
+   baseurl/products
+   baseurl/products/Handbags
+
+GET /products/:id , for getting details of a particular product
+
+POST /products , for creating a new product
+    Body -  {
+          name: name of product,
+          price: product price,
+          category: category name of that product,
+          imgLink: link of product image,
+          description: product description
+        }
+
+PUT /products/:id , for editing a particular product
+
+DELETE /products/:id , for deleting a particular product
+
+GET /orders , for getting all orders
+
+POST /orders , for creating a new order
+    Body- {
+          name: name of the user,
+          address: details address,
+          city: name of city,
+          totalPrice: total price of that order,
+          items: all items present in that order,
+          email: email id
+        }
+
+POST /login , for logging in with a user
+
+POST /register, for creating a new user
+
