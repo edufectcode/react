@@ -378,7 +378,7 @@ app.get("/getStudents", function(req, res) {
     let body = { ...item, courses: arr };
     students.push(body);
   });
-  let pageNo = +req.query.page;
+  let pageNo = req.query.page ? +req.query.page : 1;
   let course = req.query.course;
   let list = students;
   console.log(list);
@@ -444,7 +444,7 @@ app.get("/getFaculties", function(req, res) {
     let body = { ...item, courses: arr };
     faculties.push(body);
   });
-  let pageNo = +req.query.page;
+  let pageNo = req.query.page ? +req.query.page : 1;
   let course = req.query.course;
   let list = faculties;
   if (course != undefined) {
